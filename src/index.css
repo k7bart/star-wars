@@ -1,0 +1,175 @@
+:root {
+    --yellow-color: #ffe820;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Goldman", sans-serif;
+    background-color: #010101;
+    color: white;
+}
+
+#root {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+nav > ul {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+nav > ul > li {
+    flex-grow: 1;
+}
+
+.card {
+    min-width: 400px;
+    width: 50vw;
+    margin: 80px auto;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--yellow-color);
+}
+
+h3.name {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    min-width: 50%;
+    width: 330px;
+}
+
+h3.notice {
+    height: 400px;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    height: 400px;
+    margin: 0 auto;
+    object-fit: cover;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    line-height: 400px;
+    text-align: center;
+}
+
+ul.properties {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+ul.properties > li {
+    z-index: 1;
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+ul.properties > li > .property {
+    font-size: 14px;
+    opacity: 50%;
+}
+
+ul.properties > li > .value {
+    font-size: 18px;
+}
+
+.loading {
+    filter: grayscale();
+}
+
+button {
+    padding: 14px 28px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border: none;
+    position: relative;
+    background: #010101;
+    color: var(--yellow-color);
+    font-family: "Goldman", sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: transparent;
+    color: var(--yellow-color);
+}
+
+button:before,
+button:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    background: #fff27e;
+    width: 0;
+    box-shadow: 0 0 5px var(--yellow-color) 0 0 5px var(--yellow-color) inset;
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+button.next {
+    width: 400px;
+    background: var(--yellow-color);
+    color: #010101;
+}
+
+button.next:hover {
+    background: #010101;
+    color: var(--yellow-color);
+}
